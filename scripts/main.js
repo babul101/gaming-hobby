@@ -1,3 +1,13 @@
+$(window).on('load',function(){
+    $('.grid').masonry({
+        itemSelector:'.grid-item',
+        columnWidth:120,
+        fitWidth:true,
+        gutter:0
+    });
+});
+
+
 $(document).ready(function(){
     var d = moment().format('YYYY'); 
     document.getElementById("time").innerHTML = d;
@@ -20,12 +30,7 @@ $(document).ready(function(){
         }
     });
 
-    $('.grid').masonry({
-        itemSelector:'.grid-item',
-        columnWidth:120,
-        fitWidth:true,
-        gutter:0
-    });
+    
 
     $('.slider').slick({
         autoplay:true,
